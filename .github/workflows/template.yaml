@@ -63,7 +63,7 @@ env:
   COWTRANSFER_FIRMWARE: false
   WETRANSFER_FIRMWARE: false
   RELEASE_FIRMWARE: false
- 
+  # 将以下内容更改为您所在的时区。
   TIME_ZONE: Asia/Shanghai
 
 jobs:
