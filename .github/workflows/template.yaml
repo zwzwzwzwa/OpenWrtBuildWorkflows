@@ -27,8 +27,8 @@ on:
         required: false
         default: "false"
 # 取消下面的注释，以便定期运行。注意此处的 cron 表达式不包含秒数。
-  schedule:
-    - cron: 0 */18 * * *
+# schedule:
+#   - cron: 0 */18 * * *
 
 env:
   # REPO 指在此工作流程中要使用的 OpenWrt 版本库。
