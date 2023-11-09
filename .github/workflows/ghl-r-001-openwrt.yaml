@@ -13,7 +13,7 @@
 #-------------------------------------------------------------------------------------------------------
 
 # Workflow name which is showed in GitHub Actions.
-name: Build Lean LEDE for GHL-R-001
+name: Build Lean OpenWrt for GHL-R-001
 
 on:
   workflow_dispatch:
