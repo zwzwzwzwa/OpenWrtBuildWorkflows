@@ -1,18 +1,18 @@
 #
 # Copyright (c) 2022-2023 Curious <https://www.curious.host>
 #
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
+# 本软件为自由软件，采用 MIT License 许可。
+# 更多信息请参见 /LICENSE。
 # 
 # https://github.com/Curious-r/OpenWrtBuildWorkflows
-# Description: Automatically check OpenWrt source code update and build it. No additional keys are 
+# 描述： 自动检查 OpenWrt 源代码更新并构建它。无需额外密钥。
 # required.
 #
-# Some features come from https://github.com/P3TERX/Actions-OpenWrt, visit the repository to get its 
-# copyright information.
+# 某些功能来自 https://github.com/P3TERX/Actions-OpenWrt，请访问软件源获取其 # 版权信息。
+# 版权信息。
 #-------------------------------------------------------------------------------------------------------
 
-# Workflow name which is showed in GitHub Actions.
+# GitHub Actions 中显示的工作流名称。
 name: Build Example-Firmware for Example-Device
 
 on:
