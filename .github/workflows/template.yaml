@@ -26,14 +26,14 @@ on:
         description: "SSH connection to Actions"
         required: false
         default: "false"
-# Uncomment the following to run regularly. Note that the cron expression here does not contain seconds.
+# 取消下面的注释，以便定期运行。注意此处的 cron 表达式不包含秒数。
   schedule:
     - cron: 0 */18 * * *
 
 env:
-  # REPO means the OpenWrt repo you want to build from in this workflow. 
-  # You can modify the REPO_NAME to any name you want, but remember not to let it have the same name in 
-  # other workflows.
+  # REPO 指在此工作流程中要使用的 OpenWrt 版本库。
+  # 您可以将 REPO_NAME 修改为任何您想要的名称，但切记不要让它在以下文件中使用相同的名称
+  # 其他工作流程。
   REPO_NAME: example-name
   REPO_URL: https://github.com/example/example.git
   REPO_BRANCH: example-branch
@@ -45,25 +45,25 @@ env:
                    patch pkgconf python2.7 python3 python3-distutils python3-pip libpython3-dev qemu-utils rsync \
                    scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd \
                    zlib1g-dev"
-  # CONFIG_FILE is the name of your own config files for compiling, you should upload these files into the root 
-  # directory of your workflow repo.
+  # CONFIG_FILE 是用于编译的配置文件名，应将这些文件上传到根目录中。
+  # 工作流程软件仓库的目录。
   CONFIG_FILE: example.config
-  # CUSTOM_SCRIPT_1 is the name of extra bash script you want to execute before feeds update&install.
-  # CUSTOM_SCRIPT_2 is the name of extra bash script you want to execute after feeds update&install.
-  # You can modify the initial settings of your firmware through these two scripts. If this is what you need,
-  # please upload your scripts to the root directory of your workflow repo.
+  # CUSTOM_SCRIPT_1 是要在 feeds 更新&安装之前执行的额外 bash 脚本的名称。
+  # CUSTOM_SCRIPT_2 是您要在 feeds 更新&安装后执行的额外 bash 脚本的名称。
+  # 您可以通过这两个脚本修改固件的初始设置。如果这是您所需要的、
+  # 请将脚本上传到工作流软件仓库的根目录。
   CUSTOM_SCRIPT_1: example-custom-script-1.sh
   CUSTOM_SCRIPT_2: example-custom-script-2.sh
-  # STORE_PRODUCTS determine whether to upload all compilation products to workflow artifacts.
-  # Not only firmwires, all compiled packages will be here, including compiled but not solidified into firmware.
+  # STORE_PRODUCTS 决定是否将所有编译产品上传到工作流工件。
+  # 不仅仅是固件线，所有编译包都会在这里，包括已编译但未固化为固件的包。
   STORE_PRODUCTS: false
-  # STORE_FIRMWARE determine whether to upload firmwares to workflow artifacts.
+  # STORE_FIRMWARE 决定是否将固件上传到工作流工件。
   STORE_FIRMWARE: true
-  # The following are options of where the firmware needs to be transfered. 
+  # 以下是固件需要转移到哪里的选项。
   COWTRANSFER_FIRMWARE: false
   WETRANSFER_FIRMWARE: false
   RELEASE_FIRMWARE: false
-  # Change the following to your time zone.
+ 
   TIME_ZONE: Asia/Shanghai
 
 jobs:
