@@ -16,17 +16,17 @@
 # This is followed by some editing examples.
 # # Clear the feeds.conf.default and append the feed sources you need one by one:
 #cat /dev/null > a.txt
-#echo 'src-git-full packages https://git.openwrt.org/feed/packages.git;openwrt-22.03' >> feeds.conf.default
-#echo 'src-git-full luci https://git.openwrt.org/project/luci.git;openwrt-22.03' >> feeds.conf.default
-#echo 'src-git-full routing https://git.openwrt.org/feed/routing.git;openwrt-22.03' >> feeds.conf.default
-#echo 'src-git-full telephony https://git.openwrt.org/feed/telephony.git;openwrt-22.03' >> feeds.conf.default
+#echo 'src-git packages https://git.openwrt.org/feed/packages.git;openwrt-22.03' >> feeds.conf.default
+#echo 'src-git luci https://git.openwrt.org/project/luci.git;openwrt-22.03' >> feeds.conf.default
+#echo 'src-git routing https://git.openwrt.org/feed/routing.git;openwrt-22.03' >> feeds.conf.default
+#echo 'src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-22.03' >> feeds.conf.default
 # # Replace a feed source with what you want:
 #sed '/feeds-name/'d feeds.conf.default
 #echo 'method feed-name path/URL' >> feeds.conf.default
 # # Uncomment a feed source:
 #sed -i 's/^#\(.*feed-name\)/\1/' feeds.conf.default
-# # Replace src-git-full with src-git to reduce the depth of cloning:
-#sed -i 's/src-git-full/src-git/g' feeds.conf.default
+# # Replace src-git with src-git to reduce the depth of cloning:
+#sed -i 's/src-git/src-git/g' feeds.conf.default
 #
 # You can also modify the source code by patching.
 # # Here's a template for patching:
