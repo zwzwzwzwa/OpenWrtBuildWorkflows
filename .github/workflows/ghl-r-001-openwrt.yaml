@@ -21,11 +21,11 @@ on:
       force-build:
         description: "Build new firmware anyway"
         required: false
-        default: "false"
+        默认: "false"
       ssh:
         description: "SSH connection to Actions"
         required: false
-        default: false"
+        默认: false"
 # Uncomment the following to run regularly. Note that the cron expression here does not contain seconds.
   schedule:
     - cron: 0 */18 * * 5
@@ -47,7 +47,7 @@ env:
                    zlib1g-dev"
   # CONFIG_FILE is the name of your own config files for compiling, you should upload these files into the root 
   # directory of your workflow repo.
-  CONFIG_FILE: ghr-001-lean-lede.config
+  CONFIG_FILE: ghr-001-openwrt.config
   # CUSTOM_SCRIPT_1 is the name of extra bash script you want to execute before feeds update&install.
   # CUSTOM_SCRIPT_2 is the name of extra bash script you want to execute after feeds update&install.
   # You can modify the initial settings of your firmware through these two scripts. If this is what you need,
